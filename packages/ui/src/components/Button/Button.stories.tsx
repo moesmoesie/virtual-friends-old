@@ -7,4 +7,4 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-export const Primary = () => <Button />;
+export const Primary = () => <Button>Button</Button>;

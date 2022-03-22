@@ -5,7 +5,7 @@ import { Bitcoin } from "../../icons";
 import Google from "../../icons/Google";
 
 export default {
-  title: "Asset Tracking Block",
+  title: "PWA/Asset Tracking Block",
   component: Component,
   argTypes: {
     // foo is the property we want to remove from the UI

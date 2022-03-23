@@ -22,12 +22,14 @@ const AssetTrackingBlock: React.FC<AssetTrackingBlockProps> = ({
       <div className="mb-4 grid h-12 w-12 place-items-center rounded-lg bg-nyanza-500 text-teal-500">
         {Icon}
       </div>
-      <span className="mb-1 text-sm font-bold leading-none text-purple-navy-050">
+      <span className="mb-1 font-body text-sm font-bold leading-none text-purple-navy-050">
         Portfolio
       </span>
       <div className="flex items-baseline justify-between gap-2 ">
-        <span className="text-2xl font-bold leading-none">{amount}</span>
-        <span className="text-xs text-teal-500">{gain}</span>
+        <span className="font-header text-2xl font-bold leading-none">
+          {amount}
+        </span>
+        <span className="font-body text-xs text-teal-500">{gain}</span>
       </div>
     </div>
   );

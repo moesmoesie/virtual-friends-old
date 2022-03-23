@@ -10,6 +10,10 @@ function withOpacityValue(variable) {
 module.exports = {
   content: ["./src/**/*.{ts,js,tsx}"],
   theme: {
+    fontFamily: {
+      header: ["Inter", "sans-serif"],
+      body: ["Roboto", "sans"],
+    },
     colors: {
       white: withOpacityValue("--white"),
       black: withOpacityValue("--black"),

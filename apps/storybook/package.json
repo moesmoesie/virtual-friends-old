@@ -21,7 +21,8 @@
     "typescript": "^4.6.2"
   },
   "dependencies": {
-    "ui": "*"
+    "ui": "*",
+    "public": "*"
   },
   "scripts": {
     "dev": "start-storybook -p 6006",

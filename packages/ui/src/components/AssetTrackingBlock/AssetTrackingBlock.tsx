@@ -5,33 +5,62 @@ const boxShadow =
 
 export interface AssetTrackingBlockProps {
   Icon: JSX.Element;
-  amount: string;
-  gain: string;
+  amount: number;
+  change: number;
+  suffix: string;
+  isLoss: boolean;
 }
 
 const AssetTrackingBlock: React.FC<AssetTrackingBlockProps> = ({
   Icon,
   amount,
-  gain,
+  suffix,
+  change,
+  isLoss,
 }) => {
   return (
     <div
       className="flex w-36 flex-col rounded-lg bg-dark-purple-600 p-4 text-white"
       style={{ boxShadow: boxShadow }}
     >
-      <div className="mb-4 grid h-12 w-12 place-items-center rounded-lg bg-nyanza-500 text-teal-500">
-        {Icon}
-      </div>
+      <AssetIcon Icon={Icon} className="mb-4" />
       <span className="mb-1 font-body text-sm font-bold leading-none text-purple-navy-050">
         Portfolio
       </span>
       <div className="flex items-baseline justify-between gap-2 ">
         <span className="font-header text-2xl font-bold leading-none">
           {amount}
+          {suffix}
         </span>
-        <span className="font-body text-xs text-teal-500">{gain}</span>
+        <ChangePercentage change={change} isLoss={isLoss} />
       </div>
     </div>
+  );
+};
+
+const AssetIcon: React.FC<{ Icon: JSX.Element; className?: string }> = ({
+  Icon,
+  className = "",
+}) => {
+  return (
+    <div
+      className={`grid h-12 w-12 place-items-center rounded-lg bg-nyanza-500 text-teal-500 ${className}`}
+    >
+      {Icon}
+    </div>
+  );
+};
+
+const ChangePercentage: React.FC<{ change: number; isLoss: boolean }> = ({
+  isLoss,
+  change,
+}) => {
+  const color = isLoss ? "text-[#ff3333]" : "text-teal-500";
+  return (
+    <span className={`font-body text-xs ${color}`}>
+      {isLoss ? "-" : "+"}
+      {change}%
+    </span>
   );
 };
 

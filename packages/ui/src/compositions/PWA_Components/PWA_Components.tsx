@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AssetTrackingBlock, AssetsTabBar } from "../../components";
 import { AssetTrackingBlockProps } from "../../components/AssetTrackingBlock";
-
+import { FloatingContainer } from "../../components";
 const boxShadow =
   "0px 4px 5px rgba(0, 0, 0, 0.3), 0px 9px 10px rgba(0, 0, 0, 0.2), 0px 14px 32px rgba(0, 0, 0, 0.1), 0px 32px 44px rgba(0, 0, 0, 0.25)";
 
@@ -31,32 +31,35 @@ const PWA_Components: React.FC<PWA_ComponentsProps> = (props) => {
 
   return (
     <div className="inline-flex flex-col gap-7">
-      <div className="ml-5">
+      <FloatingContainer className="ml-5  ">
         <AssetsTabBar
           currentTab={value}
           tabs={tabs}
           setTab={(newValue) => setValue(newValue)}
         />
-      </div>
+      </FloatingContainer>
 
       <div className="flex items-end gap-7">
-        <div className="mb-4">
+        <FloatingContainer delay={0.2} className="mb-4">
           <AssetTrackingBlock {...data.block1} />
-        </div>
+        </FloatingContainer>
+        <FloatingContainer delay={0.3}>
+          <div
+            style={{ boxShadow }}
+            className="h-[201px] w-48 rounded-lg bg-dark-purple-600"
+          />
+        </FloatingContainer>
 
+        <FloatingContainer className="mb-8">
+          <AssetTrackingBlock {...data.block1} />
+        </FloatingContainer>
+      </div>
+      <FloatingContainer className="self-center" delay={0.5}>
         <div
           style={{ boxShadow }}
-          className="h-[201px] w-48 rounded-lg bg-dark-purple-600"
+          className="h-[150px] w-[450px] rounded-lg bg-dark-purple-600"
         />
-
-        <div className="mb-8">
-          <AssetTrackingBlock {...data.block1} />
-        </div>
-      </div>
-      <div
-        style={{ boxShadow }}
-        className="h-[150px] w-[450px] self-center rounded-lg bg-dark-purple-600"
-      />
+      </FloatingContainer>
     </div>
   );
 };

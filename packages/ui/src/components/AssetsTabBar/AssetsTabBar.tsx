@@ -22,7 +22,7 @@ const AssetsTabBar: React.FC<AssetsTabBarProps> = ({
         {tabs.map((el, index) => {
           return (
             <button
-              className={`flex w-36 items-center justify-center gap-1
+              className={`flex w-32 items-center justify-center gap-1
               ${
                 currentTab == el.value
                   ? "bg-gradient-to-b from-[#A93BFF] to-[#8834FF]"
@@ -30,7 +30,7 @@ const AssetsTabBar: React.FC<AssetsTabBarProps> = ({
               }
 
               ${index < tabs.length - 1 ? "border-r border-r-[#2E2A3C]" : ""}
-               py-2 font-bold`}
+               py-3 font-bold`}
               onClick={() => setTab(el.value)}
             >
               {el.icon}

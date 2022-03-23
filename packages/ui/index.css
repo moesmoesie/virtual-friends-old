@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  /* Color styles */
+  --white: 255 255 255;
+  --black: 0 0 0;
+  --grey--800: 44 44 44;
+  --grey--700: 72 72 72;
+  --grey--600: 100 100 100;
+  --grey--500: 128 128 128;
+  --grey--400: 154 154 154;
+  --grey--300: 179 179 179;
+  --grey--200: 204 204 204;
+  --grey--100: 230 230 230;
+  --grey--050: 243 243 243;
+  --mint--500: 163 247 181;
+  --teal--500: 64 201 162;
+  --nyanza--500: 229 249 224;
+  --voilet--900: 50 16 84;
+  --voilet--800: 68 22 114;
+  --voilet--700: 86 28 143;
+  --voilet--600: 104 34 173;
+  --voilet--500: 122 40 203;
+  --voilet--400: 137 58 216;
+  --voilet--300: 153 83 221;
+  --voilet--200: 168 109 226;
+  --voilet--100: 183 134 231;
+  --voilet--050: 191 147 234;
+  --purple-navy--900: 18 16 33;
+  --purple-navy--800: 30 25 54;
+  --purple-navy--700: 41 35 74;
+  --purple-navy--600: 53 45 95;
+  --purple-navy--500: 64 55 116;
+  --purple-navy--400: 74 63 133;
+  --purple-navy--300: 83 71 151;
+  --purple-navy--200: 93 80 168;
+  --purple-navy--100: 107 94 179;
+  --purple-navy--050: 115 103 183;
+  --dark-purple--800: 11 11 15;
+  --dark-purple--700: 18 17 24;
+  --dark-purple--600: 32 29 42;
+  --dark-purple--500: 46 42 60;
+  --dark-purple--400: 57 53 75;
+  --dark-purple--300: 69 63 90;
+  --dark-purple--200: 80 74 105;
+  --dark-purple--100: 86 79 113;
+}

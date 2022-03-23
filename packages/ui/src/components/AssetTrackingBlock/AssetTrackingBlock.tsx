@@ -16,18 +16,18 @@ const AssetTrackingBlock: React.FC<AssetTrackingBlockProps> = ({
 }) => {
   return (
     <div
-      className="flex w-36 flex-col rounded-lg bg-[#201D2A] p-4 text-white"
+      className="flex w-36 flex-col rounded-lg bg-dark-purple-600 p-4 text-white"
       style={{ boxShadow: boxShadow }}
     >
-      <div className="mb-4 grid h-12 w-12 place-items-center rounded-lg bg-[#E5F9E0] text-[#40C9A2]">
+      <div className="mb-4 grid h-12 w-12 place-items-center rounded-lg bg-nyanza-500 text-teal-500">
         {Icon}
       </div>
-      <span className="mb-1 text-sm font-bold leading-none text-[#7367B7]">
+      <span className="mb-1 text-sm font-bold leading-none text-purple-navy-050">
         Portfolio
       </span>
       <div className="flex items-baseline justify-between gap-2 ">
         <span className="text-2xl font-bold leading-none">{amount}</span>
-        <span className="text-xs text-[#40C9A2]">{gain}</span>
+        <span className="text-xs text-teal-500">{gain}</span>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 
-const OrderReceipt: React.FC = () => {
+const Receipt: React.FC = () => {
   return (
     <div className="inline-flex flex-col rounded-lg bg-dark-purple-600 py-6 px-12 text-white">
       <span className="mb-5 text-xl text-teal-500">Your order</span>
@@ -72,4 +72,4 @@ const ArrowDown = () => {
   );
 };
 
-export default OrderReceipt;
+export default Receipt;

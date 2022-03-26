@@ -1,32 +1,68 @@
 import React from "react";
 
-const Receipt: React.FC = () => {
+interface Item {
+  title: string;
+  colour: string;
+  price: string;
+  quantity: number;
+  discount?: {
+    percentage: number;
+    amount: string;
+  };
+}
+
+export interface ReceiptProps {
+  deliveryCost?: string;
+  discount?: {
+    amount: string;
+    percentage: number;
+  };
+  items: Item[];
+  totalCost: string;
+}
+
+const Receipt: React.FC<ReceiptProps> = (props) => {
+  const deliveryCost = props.deliveryCost ?? 0;
+  const discount = {
+    amount: props.discount ? props.discount.amount : 0,
+    percentage: props.discount ? props.discount.percentage : undefined,
+  };
+  const totalCost = props.totalCost;
+
   return (
     <div className="inline-flex flex-col rounded-lg bg-dark-purple-600 py-6 px-7 text-white">
       {/* Title */}
       <span className="body-2 mb-5 text-teal-500">Your order</span>
       <Devider />
       <div>
-        <Order />
-        <Devider />
-        <Order />
+        {props.items.map((item, index) => {
+          return (
+            <>
+              <Order {...item} />
+              {index !== props.items.length - 1 && <Devider />}
+            </>
+          );
+        })}
       </div>
       <div className="flex flex-col gap-2 border-y-[1px] border-dark-purple-400 py-5">
         <div className="flex justify-between">
           <span className="body-1">Delivery</span>
-          <span className="body-1">$ 4,95</span>
+          <span className="body-1">€ {deliveryCost}</span>
         </div>
         <div className="flex justify-between">
           <span className="body-1">Discount</span>
           <span className="body-1">
-            <span className="text-teal-500">20%</span> - $ 10.00
+            <span>
+              <span className="text-teal-500">{discount.percentage}%</span> -
+              <span> € {discount.amount}</span>
+            </span>
           </span>
         </div>
       </div>
       <div className="pt-5">
         <div className="flex justify-between">
           <span className="body">Total</span>
-          <span className="body-2 font-bold">€ 120,00</span>
+          <span className="body-2 font-bold">€ {totalCost}</span>
         </div>
       </div>
     </div>
@@ -37,7 +73,7 @@ const Devider: React.FC = () => {
   return <div className="h-px w-full bg-dark-purple-400" />;
 };
 
-const Order: React.FC = () => {
+const Order: React.FC<Item> = (props) => {
   return (
     <div className="flex gap-[1.188rem] py-[1.375rem]">
       {/* Image */}
@@ -46,21 +82,26 @@ const Order: React.FC = () => {
       {/* Details */}
       <div className="flex flex-col">
         {/* Title */}
-        <span className="body-2 font-bold">T-Shirt Virtual Friends</span>
+        <span className="body-2 font-bold">{props.title}</span>
 
         {/* Colour */}
         <div className="flex items-center gap-2 ">
           <span className="body-1 text-grey-200">Colour</span>
-          <div className="h-3 w-3 rounded-full bg-teal-500" />
+          <div
+            style={{
+              backgroundColor: props.colour,
+            }}
+            className="h-3 w-3 rounded-full"
+          />
         </div>
 
         <div className="flex items-center gap-4">
           {/* Price */}
-          <span className="body-2">€ 29,-</span>
+          <span className="body-2">€ {props.price}</span>
 
           {/* Size Picker */}
           <div className="flex items-center gap-2 rounded-lg bg-dark-purple-400 px-2">
-            <span className="body-1 text-grey-200">1</span>
+            <span className="body-1 text-grey-200">{props.quantity}</span>
             <ArrowDown />
           </div>
         </div>

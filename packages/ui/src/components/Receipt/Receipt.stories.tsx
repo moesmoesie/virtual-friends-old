@@ -14,7 +14,28 @@ const Template: ComponentStory<typeof Component> = (args) => (
 );
 
 export const Receipt = Template.bind({});
-Receipt.args = {};
+Receipt.args = {
+  deliveryCost: "5,00",
+  discount: {
+    amount: "10,00",
+    percentage: 40,
+  },
+  totalCost: "100,00",
+  items: [
+    {
+      colour: "#FFFFFF",
+      price: "29,95",
+      quantity: 10,
+      title: "T-Shirt Virtual Friends",
+    },
+    {
+      colour: "#FFFFFF",
+      price: "10,95",
+      quantity: 4,
+      title: "T-Shirt Virtual Friends",
+    },
+  ],
+};
 
 Receipt.parameters = {
   design: {

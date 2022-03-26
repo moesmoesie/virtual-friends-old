@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 function withOpacityValue(variable) {
   return ({ opacityValue }) => {
     if (opacityValue === undefined) {
@@ -60,5 +62,25 @@ module.exports = {
       "dark-purple-100": withOpacityValue("--dark-purple--100"),
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".body-1": {
+          fontFamily: "Roboto",
+          fontSize: "0.875rem",
+          lineHeight: 1.6,
+        },
+        ".body-2": {
+          fontFamily: "Roboto",
+          fontSize: "1.125rem",
+          lineHeight: "10rem",
+        },
+        ".body-3": {
+          fontFamily: "Roboto",
+          fontSize: "1.438rem",
+          lineHeight: 1.4,
+        },
+      });
+    }),
+  ],
 };

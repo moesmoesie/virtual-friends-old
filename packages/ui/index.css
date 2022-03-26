@@ -47,3 +47,33 @@ html {
   --dark-purple--200: 80 74 105;
   --dark-purple--100: 86 79 113;
 }
+
+@layer components {
+  .body-3 {
+    font-family: Roboto;
+    font-size: 1.438rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+  }
+  .body-2 {
+    font-family: Roboto;
+    font-size: 1.125rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+  }
+  .body {
+    font-family: Roboto;
+    font-size: 0.875rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+  }
+}

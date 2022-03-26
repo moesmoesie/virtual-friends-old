@@ -2,52 +2,66 @@ import React from "react";
 
 const Receipt: React.FC = () => {
   return (
-    <div className="inline-flex flex-col rounded-lg bg-dark-purple-600 py-6 px-12 text-white">
-      <span className="mb-5 text-xl text-teal-500">Your order</span>
-      <div className="h-px w-full bg-dark-purple-400" />
+    <div className="inline-flex flex-col rounded-lg bg-dark-purple-600 py-6 px-7 text-white">
+      {/* Title */}
+      <span className="body-2 mb-5 text-teal-500">Your order</span>
+      <Devider />
       <div>
         <Order />
+        <Devider />
         <Order />
       </div>
-      <div className="flex flex-col gap-2 border-y-[1px] border-dark-purple-400 py-6">
+      <div className="flex flex-col gap-2 border-y-[1px] border-dark-purple-400 py-5">
         <div className="flex justify-between">
-          <span>Delivery</span>
-          <span>$ 4,95</span>
+          <span className="body-1">Delivery</span>
+          <span className="body-1">$ 4,95</span>
         </div>
         <div className="flex justify-between">
-          <span>Discount</span>
-          <span>
+          <span className="body-1">Discount</span>
+          <span className="body-1">
             <span className="text-teal-500">20%</span> - $ 10.00
           </span>
         </div>
       </div>
-      <div className="pt-6">
+      <div className="pt-5">
         <div className="flex justify-between">
-          <span>Total</span>
-          <span className="text-xl font-bold">$ 120.00</span>
+          <span className="body">Total</span>
+          <span className="body-2 font-bold">€ 120,00</span>
         </div>
       </div>
     </div>
   );
 };
 
+const Devider: React.FC = () => {
+  return <div className="h-px w-full bg-dark-purple-400" />;
+};
+
 const Order: React.FC = () => {
   return (
-    <div className="flex gap-5 py-6">
-      <div className="w-16 rounded-lg bg-dark-purple-400"></div>
-      <div className="flex flex-col gap-1">
-        <span className="text-xl font-bold">T-Shirt Virtual Friends</span>
-        <div className="flex items-center gap-2 text-grey-200">
-          Colour
-          <div className="h-4 w-4 rounded-full bg-teal-500" />
+    <div className="flex gap-[1.188rem] py-[1.375rem]">
+      {/* Image */}
+      <div className="h-[5rem] w-[3.75rem] rounded-lg bg-dark-purple-400" />
+
+      {/* Details */}
+      <div className="flex flex-col">
+        {/* Title */}
+        <span className="body-2 font-bold">T-Shirt Virtual Friends</span>
+
+        {/* Colour */}
+        <div className="flex items-center gap-2 ">
+          <span className="body-1 text-grey-200">Colour</span>
+          <div className="h-3 w-3 rounded-full bg-teal-500" />
         </div>
-        <div className="flex gap-4">
-          <span className="text-xl">$ 29,95</span>
-          <div className="flex items-center gap-3 rounded-lg bg-dark-purple-400 px-3">
-            <span className="text-grey-200">1</span>
-            <div className="scale-150">
-              <ArrowDown />
-            </div>
+
+        <div className="flex items-center gap-4">
+          {/* Price */}
+          <span className="body-2">€ 29,-</span>
+
+          {/* Size Picker */}
+          <div className="flex items-center gap-2 rounded-lg bg-dark-purple-400 px-2">
+            <span className="body-1 text-grey-200">1</span>
+            <ArrowDown />
           </div>
         </div>
       </div>

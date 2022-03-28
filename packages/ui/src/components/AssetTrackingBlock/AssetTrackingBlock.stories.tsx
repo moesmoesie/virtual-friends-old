@@ -31,10 +31,8 @@ Positive.args = {
   Icon: <Bitcoin />,
 };
 Positive.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/ELu4gwRGS5i2f6XSggCC2P/Virtual-Friends-Website?node-id=167%3A146",
-  },
+  zeplinLink:
+    "zpl://components?pid=62339c5b4312c8b1de07b037&coid=6240eb2e807526132df9c692",
 };
 
 export const Negative = Template.bind({});
@@ -47,8 +45,6 @@ Negative.args = {
 };
 
 Negative.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/ELu4gwRGS5i2f6XSggCC2P/Virtual-Friends-Website?node-id=167%3A146",
-  },
+  zeplinLink:
+    "zpl://components?pid=62339c5b4312c8b1de07b037&coid=6240e052ee972010947789ab",
 };

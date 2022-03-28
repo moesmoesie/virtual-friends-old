@@ -1,1 +1,2 @@
-export { default } from "./Button";
+export { default as AccentButton } from "./AccentButton";
+export { default as DefaultButton } from "./DefaultButton";

@@ -15,3 +15,8 @@ export const EmployeeCard = Template.bind({});
 EmployeeCard.args = {
   label: "Hello World!",
 };
+
+EmployeeCard.parameters = {
+  zeplinLink:
+    "zpl://components?pid=62339c5b4312c8b1de07b037&coid=6240e0588ccd8211aab08e4a",
+};

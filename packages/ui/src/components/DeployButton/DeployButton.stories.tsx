@@ -15,3 +15,8 @@ export const DeployButton = Template.bind({});
 DeployButton.args = {
   label: "Hello World!",
 };
+
+DeployButton.parameters = {
+  zeplinLink:
+    "zpl://components?pid=62339c5b4312c8b1de07b037&coid=6240e05791a9b915ca01dc52",
+};

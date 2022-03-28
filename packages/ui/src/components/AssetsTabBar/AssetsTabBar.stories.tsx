@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import { type ComponentMeta } from "@storybook/react";
+import { ComponentStory, type ComponentMeta } from "@storybook/react";
 import Component from "./AssetsTabBar";
 import { Bitcoin, Google, Dollar } from "../../icons";
 
 export default {
   title: "PWA/Assets Tab Bar",
   component: Component,
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/ELu4gwRGS5i2f6XSggCC2P/Virtual-Friends-Website?node-id=212%3A144",
-    },
-  },
 } as ComponentMeta<typeof Component>;
 
 const tabs = [
@@ -20,9 +14,8 @@ const tabs = [
   { title: "Fiat", icon: <Dollar />, value: "fiat" },
 ];
 
-export const AssetsTabBar = () => {
+const Template: ComponentStory<typeof Component> = (args) => {
   const [value, setValue] = useState("crypto");
-
   return (
     <Component
       setTab={(newValue) => setValue(newValue)}
@@ -30,4 +23,10 @@ export const AssetsTabBar = () => {
       currentTab={value}
     />
   );
+};
+
+export const AssetsTabBar = Template.bind({});
+AssetsTabBar.parameters = {
+  zeplinLink:
+    "zpl://components?pid=62339c5b4312c8b1de07b037&coid=6240e055f9ad5213e6b93e46",
 };

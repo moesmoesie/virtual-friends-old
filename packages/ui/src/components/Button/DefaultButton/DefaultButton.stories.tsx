@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Component> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Hello World!",
+  label: "Button",
 };
 
 Default.parameters = {

@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Component> = (args) => (
 
 export const Accent = Template.bind({});
 Accent.args = {
-  label: "Hello World!",
+  label: "Button",
 };
 
 Accent.parameters = {

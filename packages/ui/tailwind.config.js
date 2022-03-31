@@ -10,7 +10,7 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
-  content: ["./src/**/*.{ts,js,tsx}"],
+  content: ["./components/**/*.{ts,js,tsx}", "./icons/**/*.{ts,js,tsx}"],
   theme: {
     fontFamily: {
       header: ["Inter", "sans-serif"],

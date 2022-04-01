@@ -73,7 +73,7 @@ module.exports = {
         ".body-2": {
           fontFamily: "Roboto",
           fontSize: "1.125rem",
-          lineHeight: "10rem",
+          lineHeight: 1.6,
         },
         ".body-3": {
           fontFamily: "Roboto",

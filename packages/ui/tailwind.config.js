@@ -83,10 +83,6 @@ module.exports = {
         ".bg-purple-gradient": {
           background: "linear-gradient(to bottom, #a93bff 0%, #8834ff 100%)",
         },
-        ".box-shadow-1": {
-          boxShadow:
-            "0 14px 32px 0 rgba(121, 71, 247, 0.1), 0 9px 10px 0 rgba(121, 71, 247, 0.2), 0 4px 5px 0 rgba(121, 71, 247, 0.3)",
-        },
       });
     }),
   ],

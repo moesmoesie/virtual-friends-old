@@ -85,6 +85,12 @@ module.exports = {
           fontSize: "1.75rem",
           lineHeight: "39.2px",
         },
+
+        ".display-4": {
+          fontFamily: "Inter",
+          fontSize: "2.188rem",
+          lineHeight: "49px",
+        },
         ".bg-purple-gradient": {
           background: "linear-gradient(to bottom, #a93bff 0%, #8834ff 100%)",
         },

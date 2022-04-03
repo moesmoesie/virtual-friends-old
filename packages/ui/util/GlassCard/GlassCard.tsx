@@ -5,13 +5,16 @@ const style = {
     "linear-gradient(141.24deg, rgba(146, 124, 255, 0.142) 1.69%, rgba(64, 201, 162, 0.048) 100%)",
 };
 
-const GlassCard: React.FC<{ className: string }> = (props) => {
+const GlassCard: React.FC<{ className?: string }> = ({
+  className = "",
+  children,
+}) => {
   return (
     <div
       style={style}
-      className={`${props.className} shadow-black backdrop-blur-[40px]`}
+      className={`${className} shadow-black backdrop-blur-[40px]`}
     >
-      {props.children}
+      {children}
     </div>
   );
 };

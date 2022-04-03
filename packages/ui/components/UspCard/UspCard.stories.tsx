@@ -8,7 +8,9 @@ export default {
 } as ComponentMeta<typeof Component>;
 
 const Template: ComponentStory<typeof Component> = (args) => (
-  <Component {...args} />
+  <div className="inline-block">
+    <Component {...args} />
+  </div>
 );
 
 const Icon = () => {

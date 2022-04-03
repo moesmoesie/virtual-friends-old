@@ -47,3 +47,11 @@ html {
   --dark-purple--200: 80 74 105;
   --dark-purple--100: 86 79 113;
 }
+
+.grounded-radiants {
+  border: double 1px transparent;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(to right, green, gold);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}

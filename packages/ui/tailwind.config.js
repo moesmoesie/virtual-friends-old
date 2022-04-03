@@ -80,8 +80,18 @@ module.exports = {
           fontSize: "1.438rem",
           lineHeight: 1.4,
         },
+        ".body-4": {
+          fontFamily: "Roboto",
+          fontSize: "1.75rem",
+          lineHeight: "39.2px",
+        },
         ".bg-purple-gradient": {
           background: "linear-gradient(to bottom, #a93bff 0%, #8834ff 100%)",
+        },
+        ".border-gradient": {
+          border: "10px solid",
+          borderImageSlice: "1",
+          borderImageSource: "linear-gradient(to left, #743ad5, #d53a9d)",
         },
       });
     }),

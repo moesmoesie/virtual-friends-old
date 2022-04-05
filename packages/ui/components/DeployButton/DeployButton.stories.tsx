@@ -13,10 +13,12 @@ const Template: ComponentStory<typeof Component> = (args) => (
 
 export const DeployButton = Template.bind({});
 DeployButton.args = {
-  label: "Hello World!",
+  onClick: () => console.log("Hello World!"),
 };
 
 DeployButton.parameters = {
-  zeplinLink:
-    "zpl://components?pid=62339c5b4312c8b1de07b037&coid=6240e05791a9b915ca01dc52",
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/ELu4gwRGS5i2f6XSggCC2P/Virtual-Friends-Website?node-id=333%3A554",
+  },
 };

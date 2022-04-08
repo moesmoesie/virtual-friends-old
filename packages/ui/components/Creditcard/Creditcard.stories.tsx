@@ -3,7 +3,7 @@ import { ComponentStory, type ComponentMeta } from "@storybook/react";
 import Component from "./Creditcard";
 
 export default {
-  title: "Creditcard",
+  title: "Company/Creditcard",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

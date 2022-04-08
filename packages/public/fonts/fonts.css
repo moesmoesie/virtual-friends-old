@@ -29,3 +29,11 @@
   font-weight: 700;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Cultive-Mono";
+  src: url("Cultive-Mono/cutive-mono-v12-latin-regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
